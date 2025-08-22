@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>What would JJ do?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background: #f4f4f9;
+    }
+    #quote-box {
+      font-size: 1.5em;
+      margin: 20px auto;
+      padding: 20px;
+      width: 60%;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Ask JJ</h1>
+  <div id="quote-box">Click the button to see what would JJ say</div>
+  <button onclick="newQuote()">Ask JJ</button>
+
+  <script>
+    // Your pre-created quotes
+    const quotes = [
+      "Gotta lose money to make money",
+      "What would Arteta do?",
+      "Are you going to run into the fire or away from it?",
+      "You know the answer - we hate Chelsea",
+      "Just say yes and figure it out later",
+	    "Sounds tough. Would you like to see a picture of my fox hut?",
+	    "Reduce those forecasts by half - no one watches Chelsea"
+    ];
+
+    function newQuote() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      document.getElementById("quote-box").innerText = quotes[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
